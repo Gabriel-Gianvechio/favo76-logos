@@ -17,9 +17,9 @@ img{display:block}a{color:inherit}
 .top{position:sticky;top:0;z-index:20;background:rgba(243,240,232,.9);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid rgba(20,20,19,.08);transition:transform .35s var(--ease)}
 .top.hide{transform:translateY(-100%)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
-.top .logo img{height:22px;width:auto}
+.top .logo{flex:0 0 auto}.top .logo img{height:22px;width:auto}
 .top nav{display:flex;gap:2px;margin-right:-8px}
-.top nav a{display:flex;align-items:center;justify-content:center;width:42px;height:44px}
+.top nav a{display:flex;flex:0 0 auto;align-items:center;justify-content:center;width:42px;height:44px}
 .top nav a i{display:block;width:26px;height:26px;border-radius:8px;border:1px solid rgba(20,20,19,.24);transition:box-shadow .2s var(--ease),transform .2s var(--ease),border-color .2s}
 .top nav a i.ck{background:conic-gradient(#d9d5cb 25%,#fff 0 50%,#d9d5cb 0 75%,#fff 0) 0 0/10px 10px}
 .top nav a i.tri{background:linear-gradient(90deg,#F8A000 0 33.4%,#141413 0 66.7%,#F3F0E8 0)}
@@ -117,6 +117,21 @@ footer p{margin:0;font-size:13px}
  .swatch:hover{transform:translateY(-3px);border-color:var(--mel)}
 }
 
+.top nav .lb{display:none}
+
+/* tablet e maior: quadrado de cor + nome */
+@media (min-width:768px){
+ .top nav{gap:2px;margin-right:-8px}
+ .top nav a{width:auto;height:40px;padding:0 10px 0 8px;gap:7px;border-radius:99px;text-decoration:none;transition:background .2s,color .2s}
+ .top nav .lb{display:inline;font-size:13px;color:rgba(20,20,19,.66);white-space:nowrap;transition:color .2s}
+ .top nav a.on{background:var(--tinta)}
+ .top nav a.on .lb{color:var(--papel)}
+}
+@media (min-width:768px) and (hover:hover){
+ .top nav a:not(.on):hover{background:rgba(20,20,19,.06)}
+ .top nav a:not(.on):hover .lb{color:var(--tinta)}
+}
+
 /* tablet */
 @media (min-width:640px){
  .wrap{padding:0 28px}
@@ -146,6 +161,8 @@ footer p{margin:0;font-size:13px}
  :root{--hh:64px}
  .wrap{padding:0 32px}
  .top .wrap{height:64px}
+ .top nav{gap:4px}
+ .top nav a{padding:0 14px 0 10px;gap:9px}
  .hero::before{background-size:120px 69.28px;-webkit-mask-image:radial-gradient(ellipse 80% 90% at 85% 40%,#000 0,transparent 70%);mask-image:radial-gradient(ellipse 80% 90% at 85% 40%,#000 0,transparent 70%)}
  .hero .wrap{padding-top:96px;padding-bottom:104px}
  .hero .mark{margin-bottom:36px}
@@ -171,7 +188,7 @@ footer p{margin:0;font-size:13px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 
 </style></head><body>
-<header class="top"><div class="wrap"><a class="logo" href="#topo" aria-label="favo76"><img src="svg/so-o-nome-fundo-claro.svg" alt="favo76"></a><nav><a href="#sem-fundo" data-nav="sem-fundo" aria-label="Sem fundo" title="Sem fundo"><i class="ck"></i></a><a href="#fundo-escuro" data-nav="fundo-escuro" aria-label="Fundo escuro" title="Fundo escuro"><i class="" style="background:#141413"></i></a><a href="#fundo-claro" data-nav="fundo-claro" aria-label="Fundo claro" title="Fundo claro"><i class="" style="background:#F3F0E8"></i></a><a href="#fundo-branco" data-nav="fundo-branco" aria-label="Fundo branco" title="Fundo branco"><i class="" style="background:#FFFFFF"></i></a><a href="#fundo-preto" data-nav="fundo-preto" aria-label="Fundo preto" title="Fundo preto"><i class="" style="background:#000000"></i></a><a href="#cores" data-nav="cores" aria-label="Cores da marca" title="Cores da marca"><i class="tri"></i></a></nav></div></header>
+<header class="top"><div class="wrap"><a class="logo" href="#topo" aria-label="favo76"><img src="svg/so-o-nome-fundo-claro.svg" alt="favo76"></a><nav><a href="#sem-fundo" data-nav="sem-fundo" aria-label="Sem fundo" title="Sem fundo"><i class="ck"></i><span class="lb">Sem fundo</span></a><a href="#fundo-escuro" data-nav="fundo-escuro" aria-label="Fundo escuro" title="Fundo escuro"><i class="" style="background:#141413"></i><span class="lb">Escuro</span></a><a href="#fundo-claro" data-nav="fundo-claro" aria-label="Fundo claro" title="Fundo claro"><i class="" style="background:#F3F0E8"></i><span class="lb">Claro</span></a><a href="#fundo-branco" data-nav="fundo-branco" aria-label="Fundo branco" title="Fundo branco"><i class="" style="background:#FFFFFF"></i><span class="lb">Branco</span></a><a href="#fundo-preto" data-nav="fundo-preto" aria-label="Fundo preto" title="Fundo preto"><i class="" style="background:#000000"></i><span class="lb">Preto</span></a><a href="#cores" data-nav="cores" aria-label="Cores da marca" title="Cores da marca"><i class="tri"></i><span class="lb">Cores</span></a></nav></div></header>
 <main id="topo">
 <section class="hero"><div class="wrap">
 <p class="eyebrow">Identidade visual</p>
