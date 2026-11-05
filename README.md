@@ -9,4 +9,4 @@ Cores: Mel `#F8A000` · Tinta `#141413` · Papel `#F4F1EA`
 
 Nomes: `fundo-escuro` = colorida, tinta clara, para fundo escuro. `fundo-claro` = colorida, tinta escura, para fundo claro. `uma-cor-clara` / `uma-cor-escura` = tudo em uma cor só.
 
-Pastas: `svg/` e `png/` (sem fundo), `fundo-escuro/` e `fundo-claro/` (já com o fundo incluído, cada uma com `svg/` e `png/`).
+Pastas: `svg/` e `png/` (sem fundo), `fundo-escuro/`, `fundo-claro/`, `fundo-branco/` e `fundo-preto/` (já com o fundo incluído, cada uma com `svg/` e `png/`).
