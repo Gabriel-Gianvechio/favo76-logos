@@ -2,7 +2,7 @@
 
 Cardápio de logos: abra `index.html` (ou a página do GitHub Pages) e baixe SVG ou PNG.
 
-Três espessuras de traço, em todo o logo (letras, 76 e símbolo): `fino`, `medio` e `grosso`.
+Duas espessuras de traço, em todo o logo (letras, 76 e símbolo): `medium` (mais fino) e `heavy`.
 
 - `svg/` e `png/`: sem fundo (transparente)
 - `fundo-escuro/`, `fundo-claro/`, `fundo-branco/`, `fundo-preto/`: já com o fundo incluído (cada uma com `svg/` e `png/`)
